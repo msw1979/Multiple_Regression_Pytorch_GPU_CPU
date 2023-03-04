@@ -145,8 +145,12 @@ output_dim = 1
 train_loader=DataLoader(dataset=train_tensor, batch_size=50)
 validation_loader = DataLoader(dataset=val_tensor, batch_size=50)
 
-# Create model
+# Create class model
 model  = Linear_reg(input_dim, output_dim)
+
+# Model using Sequential
+#model = nn.Sequential(nn.Linear(input_dim, output_dim))
+
 #load the model to device
 model = model.to(device)
 #define a criterion to calculate the loss
